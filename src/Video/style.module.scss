@@ -1,0 +1,41 @@
+.host {
+	display: block;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	position: relative;
+	padding-top: (100% / 16) * 9;
+}
+
+.iframe,
+.image,
+.controls {
+	position: absolute;
+	border: none;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+.controls {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 100%;
+
+	> .body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	> .footer {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.image {
+	transition: opacity .3s ease;
+}

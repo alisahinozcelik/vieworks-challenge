@@ -1,0 +1,15 @@
+:global {
+	*,
+	*:before,
+	*:after {
+		box-sizing: border-box;
+	}
+}
+
+.title {
+	font-size: x-large;
+}
+
+.main {
+	padding: 2vh 5vw;
+}

@@ -1,10 +1,11 @@
 import React from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 import AppBar from '@material-ui/core/AppBar';
-import style from './App.module.scss';
+import style from './style.module.scss';
 import Video from "./Video";
 
 const App = () => {
+
   return (
     <>
       <AppBar position="static">
