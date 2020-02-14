@@ -100,7 +100,9 @@ export default class Video extends React.Component<Props, State> {
 					autoplay: 1
 				},
 				events: {
-					onReady: noop,
+					onReady: () => {
+						this.player!.stopVideo();
+					},
 					onStateChange: ({data}) => {
 						if (!this.playerReady) {
 							this.onPlayerReady();
@@ -185,7 +187,7 @@ export default class Video extends React.Component<Props, State> {
 	render() {
 		const { videoId, playingState, duration, seconds, buffer, muted } = this.state;
 
-		const value = (100 / duration) * seconds;
+		const value = duration ? (100 / duration) * seconds : 0;
 
 		return (
 			<figure className={style.host}>
