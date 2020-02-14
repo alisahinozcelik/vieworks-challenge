@@ -162,8 +162,9 @@ export default class Video extends React.Component<Props, State> {
 		this.dataIntervalId = window.setInterval(() => {
 			const buffer = this.player!.getVideoLoadedFraction() * 100;
 			const seconds = this.player!.getCurrentTime();
+			const duration = this.player!.getDuration();
 
-			this.setState({buffer, seconds});
+			this.setState({buffer, seconds, duration});
 
 		}, 100);
 	}
@@ -188,6 +189,9 @@ export default class Video extends React.Component<Props, State> {
 		const { videoId, playingState, duration, seconds, buffer, muted } = this.state;
 
 		const value = duration ? (100 / duration) * seconds : 0;
+
+		console.log(this.state);
+		
 
 		return (
 			<figure className={style.host}>
