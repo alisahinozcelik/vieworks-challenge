@@ -190,9 +190,6 @@ export default class Video extends React.Component<Props, State> {
 
 		const value = duration ? (100 / duration) * seconds : 0;
 
-		console.log(this.state);
-		
-
 		return (
 			<figure className={style.host}>
 				<iframe ref={this.iframeRef} title="Video" className={style.iframe} src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&controls=0&showInfo=0&autoplay=1`}></iframe>
